@@ -36,8 +36,8 @@ $result = $conn->query($sql);
         <label for="favoritePlayer">Pemain Favorit:</label>
         <input type="text" id="favoritePlayer" name="favoritePlayer" required><br><br>
 
-        <label for="newsletter">Daftar Newsletter:</label>
-        <input type="checkbox" id="newsletter" name="newsletter"><br><br>
+        <label for="VIP">Daftar VIP:</label>
+        <input type="checkbox" id="VIP" name="VIP"><br><br>
 
         <label for="team">Tim Favorit:</label>
         <input type="radio" id="team1" name="team" value="Chelsea" checked>Chelsea
@@ -53,7 +53,7 @@ $result = $conn->query($sql);
                 <th>Nama</th>
                 <th>Email</th>
                 <th>Pemain Favorit</th>
-                <th>Newsletter</th>
+                <th>VIP</th>
                 <th>Tim Favorit</th>
             </tr>
         </thead>
@@ -66,7 +66,7 @@ $result = $conn->query($sql);
                     echo "<td>" . htmlspecialchars($row['name']) . "</td>";
                     echo "<td>" . htmlspecialchars($row['email']) . "</td>";
                     echo "<td>" . htmlspecialchars($row['favorite_player']) . "</td>";
-                    echo "<td>" . ($row['newsletter'] ? "Ya" : "Tidak") . "</td>";
+                    echo "<td>" . ($row['VIP'] ? "Ya" : "Tidak") . "</td>";
                     echo "<td>" . htmlspecialchars($row['team']) . "</td>";
                     echo "</tr>";
                 }
